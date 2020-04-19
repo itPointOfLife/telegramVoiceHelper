@@ -1,0 +1,35 @@
+{
+    "name": "Telegram Voice Send",
+    "version": "1.0",
+    "manifest_version": 2,
+
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "64": "icons/64.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+
+    "content_scripts": [{
+        "matches": ["https://web.telegram.org/*" ],
+        "js": [ "default.js", "voice.js" ],
+        "run_at": "document_end"
+    }],
+
+    "browser_action": {
+        "default_title": "Telegram helper settings",
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/16.png",
+            "32": "icons/32.png",
+            "48": "icons/48.png",
+            "64": "icons/64.png"
+        }
+    }
+
+}

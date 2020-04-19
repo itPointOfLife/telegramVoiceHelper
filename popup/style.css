@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: aliceblue;
+}
+h3 {
+  margin: 10px 10px 0 10px;
+  min-width: 310px;
+}
+svg {
+  width: 15px;
+}
+ul {
+  padding: 0 20px;
+}
+ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+ul li input {
+  width: 150px;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+ul li a {
+  position: relative;
+}
+ul li a .indicator {
+  display: none;
+  position: absolute;
+  top: -7px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  background: red;
+  border-radius: 50%;
+}
+label.checkbox {
+  cursor: pointer;
+  user-select: none;
+}
+label.checkbox [type=checkbox] {
+  display: none;
+}
+.checkbox_svg {
+  width: 15px;
+}
+.checkbox_line {
+  fill: none;
+  stroke: #00CC33;
+  stroke-width: 20;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 0, 154;
+}
+.checkbox [type=checkbox]:checked + .checkbox_svg .checkbox_line {
+  animation: checked 0.4s ease 1 forwards;
+}
+@keyframes checked {
+  from {
+    stroke-dasharray: 0, 154;
+  }
+  to {
+    stroke-dasharray: 140, 154;
+  }
+}
+body ul li:nth-child(1):before {
+  content: "Активация :";
+  display: block;
+  min-width: 100px;
+}
+body ul li:nth-child(2):before {
+  content: "Деактивация :";
+  display: block;
+  min-width: 100px;
+}
+body ul li:nth-child(3):before {
+  content: "Отправка :";
+  display: block;
+  min-width: 100px;
+}
+body ul li:nth-child(4):before {
+  content: "Перенос :";
+  display: block;
+  min-width: 100px;
+}
